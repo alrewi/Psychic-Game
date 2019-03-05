@@ -70,7 +70,7 @@ function compareLetters () {
     if (usersLetter === computersLetter) {
         totalWins++;
         startGame();
-    } else {
+    } else if (guessedLetters.indexOf(usersLetter) === -1) {
         guessedLetters.push(usersLetter);
         document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + guessedLetters;
         guessesRemaining--;
